@@ -2,8 +2,12 @@ import React, {fragment} from "react";
 import AddItem from "./AddItem";
 
 const CardContainer = () => {
+    const currentText = (text) =>{
+        console.log(text)
+    }
     return(
-        <AddItem></AddItem>
+        <AddItem
+        currentText={currentText}/>
     )
     
 }
