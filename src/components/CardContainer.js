@@ -1,13 +1,27 @@
-import React, {fragment} from "react";
+import React, {Fragment, fragment} from "react";
 import AddItem from "./AddItem";
+import ListItems from "./ListItems";
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem } from "../redux/actions";
 
 const CardContainer = () => {
+    const dispatch = useDispatch()
+    const listItems = useSelector((state)=>state.list.items)
+    console.log(listItems)
+
     const currentText = (text) =>{
-        console.log(text)
+        dispatch(addItem(text))
     }
     return(
-        <AddItem
-        currentText={currentText}/>
+        <Fragment>
+             <AddItem
+                currentText={currentText}/>
+            <ListItems
+                items={listItems}
+            />
+        </Fragment>
+       
+
     )
     
 }
