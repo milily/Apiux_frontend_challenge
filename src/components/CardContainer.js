@@ -15,7 +15,7 @@ const CardContainer = () => {
     return(
         <Fragment>
              <AddItem
-                currentText={currentText}/>
+                getCurrentText={currentText}/>
             <ListItems
                 items={listItems}
             />

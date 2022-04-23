@@ -4,8 +4,8 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-const AddItem = ({currentText}) =>{
-    const [textInput, setTextInput] = useState("")
+const AddItem = ({getCurrentText, defaultValue=""}) =>{
+    const [textInput, setTextInput] = useState(defaultValue)
     
     return(
         <Fragment>
@@ -16,7 +16,7 @@ const AddItem = ({currentText}) =>{
                 maxRows={4}
                 onChange={(event)=>setTextInput(event.target.value)}
                 />
-               <Button variant="contained" onClick={()=>currentText(textInput)}>Contained</Button>
+               <Button variant="contained" onClick={()=>getCurrentText(textInput)}>Contained</Button>
         </Fragment>
        
     )
