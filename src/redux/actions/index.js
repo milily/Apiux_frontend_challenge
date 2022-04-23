@@ -5,3 +5,10 @@ export const addItem = (text) => {
     }
 
 }
+export const removeItem = (index) => {
+    return {
+        type: 'REMOVE_ITEM',
+        index: index
+    }
+
+}
