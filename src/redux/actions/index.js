@@ -5,6 +5,14 @@ export const addItem = (text) => {
     }
 
 }
+export const editItem = (index, newText) => {
+    return {
+        type: 'EDIT_ITEM',
+        index: index,
+        newText: newText
+    }
+
+}
 export const removeItem = (index) => {
     return {
         type: 'REMOVE_ITEM',

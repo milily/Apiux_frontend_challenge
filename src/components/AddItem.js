@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 
 const AddItem = ({getCurrentText, defaultValue=""}) =>{
     const [textInput, setTextInput] = useState(defaultValue)
-    
+    console.log(defaultValue)
     return(
         <Fragment>
              <TextField
@@ -14,6 +14,7 @@ const AddItem = ({getCurrentText, defaultValue=""}) =>{
                 label="Multiline"
                 multiline
                 maxRows={4}
+                value={textInput}
                 onChange={(event)=>setTextInput(event.target.value)}
                 />
                <Button variant="contained" onClick={()=>getCurrentText(textInput)}>Contained</Button>
