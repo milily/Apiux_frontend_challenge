@@ -9,7 +9,8 @@ function appReducer(state = initialState, action) {
             return {...state, items: [...state.items, action.text]}
             }
         case 'REMOVE_ITEM':{
-            return {...state, items: [...state.items.splice(action.index, 1)]}
+            const list = state.items.filter((_,index)=> index !== action.index)
+            return {...state, items: list}
         }   
         default:
             return state

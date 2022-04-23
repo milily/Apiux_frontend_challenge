@@ -30,7 +30,6 @@ const ListItems = ({items}) => {
                             <DeleteIcon />
                         </IconButton>
                     </Fragment>
-                
                 }
                 
                 disablePadding
