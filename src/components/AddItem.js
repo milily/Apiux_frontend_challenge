@@ -1,7 +1,5 @@
 import React, {Fragment, useState} from "react"
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 const AddItem = ({getCurrentText, defaultValue=""}) =>{
@@ -17,7 +15,7 @@ const AddItem = ({getCurrentText, defaultValue=""}) =>{
                 value={textInput}
                 onChange={(event)=>setTextInput(event.target.value)}
                 />
-               <Button variant="contained" onClick={()=>getCurrentText(textInput)}>Contained</Button>
+               <Button variant="contained" onClick={()=>getCurrentText(textInput)}>Agregar</Button>
         </Fragment>
        
     )
