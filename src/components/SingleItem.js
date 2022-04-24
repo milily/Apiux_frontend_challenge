@@ -16,6 +16,7 @@ const ListItems = ({index, value, labelId}) => {
     const dispatch = useDispatch()
     const getCurrentText = (newText) => {
         dispatch(editItem(index, newText))
+        setIsEditing(false)
     }
 
     return(
