@@ -1,4 +1,5 @@
 import React, {Fragment} from "react";
+import Grid from '@mui/material/Grid';
 import AddItem from "./AddItem";
 import ListItems from "./ListItems";
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,11 +15,18 @@ const CardContainer = () => {
     }
     return(
         <Fragment>
-             <AddItem
-                getCurrentText={currentText}/>
-            <ListItems
-                items={listItems}
-            />
+            <Grid container sx={{ justifyContent: 'center' }}>
+                <Grid item xs={10}>
+                    <AddItem
+                        getCurrentText={currentText}
+                    />
+                    <ListItems
+                        items={listItems}
+                    />
+                </Grid>
+                
+            </Grid>
+            
         </Fragment>
        
 

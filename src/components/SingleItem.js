@@ -1,5 +1,6 @@
-import React, {Fragment, useState} from 'react'
-import { useDispatch} from 'react-redux'
+import React, {Fragment, useState} from 'react';
+import Card from '@mui/material/Card';
+import { useDispatch} from 'react-redux';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -20,34 +21,37 @@ const ListItems = ({index, value, labelId}) => {
     }
 
     return(
-       
-        <ListItem
-            secondaryAction={
-                <Fragment>
-                    <IconButton edge="end" aria-label="comments" onClick={()=>setIsEditing(!isEditing)}>
-                        <CreateIcon />
-                    </IconButton>
-                    <IconButton edge="end" aria-label="comments" onClick={()=>dispatch(removeItem(index))}>
-                        <DeleteIcon />
-                    </IconButton>
-                </Fragment>
-            }
-            
-            disablePadding
-        >
-            <ListItemButton role={undefined}  dense>
-            <ListItemIcon>
-                <Checkbox
-                edge="start"
+        
+        <Card sx={{backgroundColor: '#edf5f9', borderRadius: '14px', border: '3px solid #ffdd56' }}>
+            <ListItem
+                secondaryAction={
+                    <Fragment>
+                        <IconButton edge="end" aria-label="comments" onClick={()=>setIsEditing(!isEditing)}>
+                            <CreateIcon />
+                        </IconButton>
+                        <IconButton edge="end" aria-label="comments" onClick={()=>dispatch(removeItem(index))}>
+                            <DeleteIcon />
+                        </IconButton>
+                    </Fragment>
+                }
                 
-                tabIndex={-1}
-                disableRipple
-                inputProps={{ 'aria-labelledby': labelId }}
-                />
-            </ListItemIcon>
-            {isEditing ? <AddItem defaultValue={value} getCurrentText={getCurrentText}/> : <ListItemText id={labelId} primary={value} />}
-            </ListItemButton>
-        </ListItem>
+                disablePadding
+            >
+                <ListItemButton role={undefined}  dense>
+                <ListItemIcon>
+                    <Checkbox
+                    edge="start"
+                    
+                    tabIndex={-1}
+                    disableRipple
+                    inputProps={{ 'aria-labelledby': labelId }}
+                    />
+                </ListItemIcon>
+                {isEditing ? <AddItem defaultValue={value} getCurrentText={getCurrentText}/> : <ListItemText id={labelId} primary={value} />}
+                </ListItemButton>
+            </ListItem>
+        </Card>
+        
     )
     
 }

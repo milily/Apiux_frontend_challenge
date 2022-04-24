@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from "react"
+import React, {Fragment, useState} from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
@@ -9,7 +9,7 @@ const AddItem = ({getCurrentText, defaultValue=""}) =>{
         <Fragment>
              <TextField
                 id="outlined-multiline-flexible"
-                label="Multiline"
+                label="Escribe una tarea"
                 multiline
                 maxRows={4}
                 value={textInput}

@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react'
 import List from '@mui/material/List';
 import SingleItem from './SingleItem'
-import { removeItem } from "../redux/actions";
 
 const ListItems = ({items}) => {
     return(
