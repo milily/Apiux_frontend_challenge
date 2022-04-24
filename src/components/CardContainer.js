@@ -8,7 +8,6 @@ import { addItem } from "../redux/actions";
 const CardContainer = () => {
     const dispatch = useDispatch()
     const listItems = useSelector((state)=>state.list.items)
-    console.log(listItems)
 
     const currentText = (text) =>{
         dispatch(addItem(text))
@@ -24,14 +23,9 @@ const CardContainer = () => {
                         items={listItems}
                     />
                 </Grid>
-                
             </Grid>
-            
         </Fragment>
-       
-
     )
-    
 }
 
 export default CardContainer

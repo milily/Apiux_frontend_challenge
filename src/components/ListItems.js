@@ -1,25 +1,28 @@
-import React, {Fragment} from 'react'
+import React from 'react';
+import Card from '@mui/material/Card';
 import List from '@mui/material/List';
 import SingleItem from './SingleItem'
 
 const ListItems = ({items}) => {
     return(
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-        {items.map((value, index) => {
-            const labelId = `checkbox-list-label-${value}`;
+        
+        <List sx={{ width: '50%', bgcolor: '#e3e6e9', marginTop: 4 }}>
+            {items.map((value, index) => {
+                const labelId = `checkbox-list-label-${value}`;
 
-            return (
-                <SingleItem 
-                    key={index} 
-                    index={index} 
-                    value={value}
-                    labelId={labelId}
-                />
-            );
-        })}
-    </List>
+                return (
+                    <Card sx={{backgroundColor: '#edf5f9', borderRadius: '14px', marginBottom: 1 }}>
+                        <SingleItem 
+                            key={index} 
+                            index={index} 
+                            value={value}
+                            labelId={labelId}
+                        />
+                    </Card>
+                );
+            })}
+        </List>
     )
-    
 }
 
 export default ListItems
