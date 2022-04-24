@@ -24,26 +24,34 @@ const ListItems = ({index, value, labelId}) => {
             sx={{ height: 'auto', paddingTop: 0.5}}
             secondaryAction={
                 <Fragment>
-                    <IconButton edge="end" aria-label="comments" onClick={()=>setIsEditing(!isEditing)}>
+                    <IconButton 
+                        
+                        edge="end" 
+                        aria-label="comments" 
+                        onClick={()=>setIsEditing(!isEditing)}>
                         <CreateIcon />
                     </IconButton>
-                    <IconButton edge="end" aria-label="comments" onClick={()=>dispatch(removeItem(index))}>
+                    <IconButton 
+                        edge="end" 
+                        aria-label="comments" 
+                        onClick={()=>dispatch(removeItem(index))}>
                         <DeleteIcon />
                     </IconButton>
                 </Fragment>
             }
             disablePadding
         >
-            <ListItemButton role={undefined}  >
+            <ListItemButton 
+                role={undefined}  >
             <ListItemIcon>
                 <Checkbox
-                edge="start"
-                tabIndex={-1}
-                disableRipple
-                inputProps={{ 'aria-labelledby': labelId }}
+                    edge="start"
+                    tabIndex={-1}
+                    disableRipple
+                    inputProps={{ 'aria-labelledby': labelId }}
                 />
             </ListItemIcon>
-            {isEditing ? <AddItem defaultValue={value} getCurrentText={getCurrentText}/> : <ListItemText id={labelId} primary={value} />}
+            {isEditing ? <AddItem paragraph={true} defaultValue={value} getCurrentText={getCurrentText}/> : <ListItemText paragraph={true} id={labelId} primary={value} />}
             </ListItemButton>
         </ListItem>
     )
