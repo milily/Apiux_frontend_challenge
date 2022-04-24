@@ -11,9 +11,10 @@ const ListItems = ({items}) => {
                 const labelId = `checkbox-list-label-${value}`;
 
                 return (
-                    <Card sx={{ backgroundColor: '#edf5f9', borderRadius: '14px', marginBottom: 1, overflowWrap: 'break-word' }}>
-                        <SingleItem 
-                            key={index} 
+                    <Card
+                        key={index} 
+                        sx={{ backgroundColor: '#edf5f9', borderRadius: '14px', marginBottom: 1, overflowWrap: 'break-word' }}>
+                        <SingleItem  
                             index={index} 
                             value={value}
                             labelId={labelId}

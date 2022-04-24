@@ -25,7 +25,6 @@ const ListItems = ({index, value, labelId}) => {
             secondaryAction={
                 <Fragment>
                     <IconButton 
-                        
                         edge="end" 
                         aria-label="comments" 
                         onClick={()=>setIsEditing(!isEditing)}>
@@ -51,7 +50,7 @@ const ListItems = ({index, value, labelId}) => {
                     inputProps={{ 'aria-labelledby': labelId }}
                 />
             </ListItemIcon>
-            {isEditing ? <AddItem paragraph={true} defaultValue={value} getCurrentText={getCurrentText}/> : <ListItemText paragraph={true} id={labelId} primary={value} />}
+            {isEditing ? <AddItem defaultValue={value} getCurrentText={getCurrentText}/> : <ListItemText id={labelId} primary={value} />}
             </ListItemButton>
         </ListItem>
     )

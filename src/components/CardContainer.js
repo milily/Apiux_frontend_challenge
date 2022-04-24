@@ -10,6 +10,9 @@ const CardContainer = () => {
     const listItems = useSelector((state)=>state.list.items)
 
     const currentText = (text) =>{
+        if(text === ''){
+            return 
+        }
         dispatch(addItem(text))
     }
     return(

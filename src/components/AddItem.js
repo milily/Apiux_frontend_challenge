@@ -20,7 +20,9 @@ const AddItem = ({getCurrentText, defaultValue=""}) =>{
             <Button
                 sx={{marginLeft: 2}}
                 variant="contained" 
-                onClick={()=>getCurrentText(textInput)}>Agregar</Button>
+                onClick={()=>{
+                    getCurrentText(textInput);
+                    setTextInput('')}}>Agregar</Button>
         </Fragment>
     )
 }
