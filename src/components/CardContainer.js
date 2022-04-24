@@ -14,7 +14,7 @@ const CardContainer = () => {
     }
     return(
         <Fragment>
-            <Grid container sx={{ justifyContent: 'center' }}>
+            <Grid container sx={{ justifyContent: 'center', marginTop: 5 }}>
                 <Grid item xs={10}>
                     <AddItem
                         getCurrentText={currentText}

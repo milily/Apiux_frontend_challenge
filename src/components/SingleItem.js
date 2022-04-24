@@ -20,7 +20,8 @@ const ListItems = ({index, value, labelId}) => {
     }
 
     return(
-        <ListItem
+        <ListItem 
+            sx={{ height: 'auto', paddingTop: 0.5}}
             secondaryAction={
                 <Fragment>
                     <IconButton edge="end" aria-label="comments" onClick={()=>setIsEditing(!isEditing)}>
@@ -31,14 +32,12 @@ const ListItems = ({index, value, labelId}) => {
                     </IconButton>
                 </Fragment>
             }
-            
             disablePadding
         >
-            <ListItemButton role={undefined}  dense>
+            <ListItemButton role={undefined}  >
             <ListItemIcon>
                 <Checkbox
                 edge="start"
-                
                 tabIndex={-1}
                 disableRipple
                 inputProps={{ 'aria-labelledby': labelId }}

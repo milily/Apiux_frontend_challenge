@@ -11,11 +11,15 @@ const AddItem = ({getCurrentText, defaultValue=""}) =>{
                 id="outlined-multiline-flexible"
                 label="Escribe una tarea"
                 multiline
+                size="small"
                 maxRows={4}
                 value={textInput}
                 onChange={(event)=>setTextInput(event.target.value)}
-                />
-               <Button variant="contained" onClick={()=>getCurrentText(textInput)}>Agregar</Button>
+            />
+            <Button
+                sx={{marginLeft: 2}}
+                variant="contained" 
+                onClick={()=>getCurrentText(textInput)}>Agregar</Button>
         </Fragment>
        
     )
