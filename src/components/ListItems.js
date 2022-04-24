@@ -6,7 +6,7 @@ import SingleItem from './SingleItem'
 const ListItems = ({items}) => {
     return(
         
-        <List sx={{ width: '50%', bgcolor: '#e3e6e9', marginTop: 4 }}>
+        <List sx={{ width: '100%', bgcolor: '#e3e6e9', marginTop: 4 }}>
             {items.map((value, index) => {
                 const labelId = `checkbox-list-label-${value}`;
 
