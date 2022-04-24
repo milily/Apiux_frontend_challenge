@@ -3,8 +3,9 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 const AddItem = ({getCurrentText, defaultValue=""}) =>{
+
     const [textInput, setTextInput] = useState(defaultValue)
-    console.log(defaultValue)
+
     return(
         <Fragment>
              <TextField
@@ -21,9 +22,7 @@ const AddItem = ({getCurrentText, defaultValue=""}) =>{
                 variant="contained" 
                 onClick={()=>getCurrentText(textInput)}>Agregar</Button>
         </Fragment>
-       
     )
-
 }
 
 export default AddItem
