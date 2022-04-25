@@ -2,11 +2,11 @@ import './App.css';
 import CardContainer from './components/CardContainer';
 
 function App() {
-  return (
-    <div className="App">
-      <CardContainer></CardContainer>
-    </div>
-  );
+    return (
+        <div className="App">
+            <CardContainer></CardContainer>
+        </div>
+    );
 }
 
 export default App;
